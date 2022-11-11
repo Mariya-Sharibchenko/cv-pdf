@@ -1,6 +1,23 @@
+<!DOCTYPE html>
+<script>
+  function number_pages() {
+    var vars={};
+    var x=document.location.search.substring(1).split('&');
+    for(var i in x) {var z=x[i].split('=',2);vars[z[0]] = decodeURIComponent(z[1]);}
+    var x=['frompage','topage','page','webpage','section','subsection','subsubsection'];
+    for(var i in x) {
+      var y = document.getElementsByClassName(x[i]);
+      for(var j=0; j<y.length; ++j) {
+        y[j].textContent = '0' + vars[x[i]];
+      }
+    }
+  }
+</script>
+<body onload="number_pages()">
 <div style="font-family: 'Rubik', sans-serif; font-weight: 400; color: #ACB1B6">
-    <div style="height: 9.2mm;"></div>
+    <div style="height: 9.2mm;"><span id="console"></span></div>
     <div style="border-top: 1px solid #F4F5F7; margin-left: -8px; margin-right:-8px; padding: 5.3mm 14mm 5.6mm;font-size: 3.5mm; line-height: 5.6mm;">
-        {{ 01 / 02 }}
+        <span class="page"></span> / <span class="topage"></span>
     </div>
 </div>
+</body>
