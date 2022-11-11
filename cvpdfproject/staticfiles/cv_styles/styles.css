@@ -1,7 +1,21 @@
 @font-face {
   font-family: 'Rubik';
-  src: url(http://127.0.0.1:8000/static/cv_styles/fonts/Rubik/static/Rubik-Regular.ttf);
+  src: url(http://127.0.0.1:8000/static/cv_styles/fonts/Rubik/Rubik-Regular.ttf);
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RubikBold';
+  src: url(http://127.0.0.1:8000/static/cv_styles/fonts/Rubik/Rubik-Bold-Custom.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RubikSemiBold';
+  src: url(http://127.0.0.1:8000/static/cv_styles/fonts/Rubik/Rubik-SemiBold-Custom.ttf);
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -81,6 +95,7 @@ ul, ol {
 }
 
 .student-name {
+    font-family: 'RubikBold', sans-serif;
     font-size: 7mm;
     line-height: 8.5mm;
     letter-spacing: 0.35mm;
@@ -117,6 +132,7 @@ ul, ol {
 }
 
 .infoblock-title {
+    font-family: 'RubikSemiBold', sans-serif;
     color: #ACB1B6;
     text-transform: uppercase;
     font-size: 2.8mm;
@@ -133,6 +149,7 @@ ul, ol {
 }
 
 .company-name, .school-name {
+    font-family: 'RubikBold', sans-serif;
     font-size: 4.9mm;
     margin-bottom: 2.8mm;
 }
@@ -143,6 +160,7 @@ ul, ol {
 }
 
 .experience-info .position, .education-info .position {
+    font-family: 'RubikSemiBold', sans-serif;
     font-size: 4.2mm;
     line-height: 5.6mm;
     margin-bottom: 0.7mm;
@@ -167,6 +185,7 @@ ul, ol {
 }
 
 .project-name {
+    font-family: 'RubikSemiBold', sans-serif;
     margin-bottom: 1.4mm;
 }
 
