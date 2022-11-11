@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url(http://127.0.0.1:8000/static/cv_styles/fonts/Rubik/static/Rubik-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    margin-left: -4px;
+    margin-right: -4px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    color: #101214;
+    font-size: 3.5mm;
+    line-height: 5.6mm;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+}
+
+li, ul, ol, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.wrapper {
+    padding: 0 14mm;
+}
+
+.logo {
+    width: 57.2mm;
+    height: 5.6mm;
+    background-image: url("http://127.0.0.1:8000/static/cv_styles/images/Logo_TMS.svg");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-bottom: 14.1mm;
+}
+
+.container {
+    display: -webkit-box;
+    display: flex;
+    margin-bottom: 8.5mm;
+}
+
+.container-left {
+    max-width: 117.5mm;
+    margin-right: 10.2mm;
+}
+
+.container-right {
+    max-width: 53mm;
+}
+
+.student-photo-wrapper {
+    padding-top: 2.7mm;
+    margin-bottom: 8.6mm;
+}
+
+.student-photo {
+    width: 45.2mm;
+    height: 45.2mm;
+    border-radius: 50%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.no-student-photo {
+    height: 19.7mm;
+}
+
+.header {
+    margin-bottom: 11.3mm;
+}
+
+.student-name {
+    font-size: 7mm;
+    line-height: 8.5mm;
+    letter-spacing: 0.35mm;
+    margin-bottom: 2.8mm;
+}
+
+.student-position {
+    font-size: 4.9mm;
+}
+
+.student-phone, .student-email, .media-item {
+    display: -webkit-box;
+    display: flex;
+}
+
+.student-phone {
+    margin-bottom: 2.2mm;
+}
+
+.student-phone span {
+    white-space: nowrap;
+}
+
+.student-social-media li:not(:last-child) {
+    margin-bottom: 2.2mm;
+}
+
+.student-social-media a {
+    color: #101214;
+}
+
+.infoblock {
+    margin-bottom: 8.5mm;
+}
+
+.infoblock-title {
+    color: #ACB1B6;
+    text-transform: uppercase;
+    font-size: 2.8mm;
+    letter-spacing: 0.7mm;
+    margin-bottom: 3.9mm;
+}
+
+.container-right .infoblock-title {
+    margin-bottom: 1mm;
+}
+
+.education .education-item:not(:last-child), .experience .experience-item:not(:last-child) {
+    margin-bottom: 7mm;
+}
+
+.company-name, .school-name {
+    font-size: 4.9mm;
+    margin-bottom: 2.8mm;
+}
+
+.experience-info, .education-info {
+    border-left: 0.35mm solid #070707;
+    padding: 1.4mm 0 2.8mm 5.6mm;
+}
+
+.experience-info .position, .education-info .position {
+    font-size: 4.2mm;
+    line-height: 5.6mm;
+    margin-bottom: 0.7mm;
+}
+
+.experience-info .terms, .education-info .terms {
+    color: #ACB1B6;
+    margin-bottom: 1.4mm;
+}
+
+.projects {
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+.projects .projects-item {
+    margin-left: 4.6mm;
+}
+
+.projects .projects-item:not(:last-child) {
+    margin-bottom: 2.8mm;
+}
+
+.project-name {
+    margin-bottom: 1.4mm;
+}
+
+.project-stack {
+    margin-bottom: 2.8mm;
+}
+
+.project-stack .stack-item:not(:last-child) {
+    margin-right: 1.4mm;
+}
+
+.project-stack .stack-item {
+    display: inline-block;
+    padding: 0.35mm 2.1mm;
+    background-color: #FFDA17;
+    border-radius: 0.7mm;
+    font-size: 2.8mm;
+    line-height: 4.2mm;
+}
+
+.problem {
+    margin-bottom: 2.8mm;
+}
+
+.problem-title, .solution-title {
+    color: #ACB1B6;
+}
+
+.languages, .skills {
+    color: #ACB1B6;
+}
+
+.icon {
+    width: 5.6mm;
+    height: 5.6mm;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 1.4mm;
+}
+
+.phone-icon {
+    background-image: url("http://127.0.0.1:8000/static/cv_styles/images/phone_icon.svg");
+}
+
+.email-icon {
+    background-image: url("http://127.0.0.1:8000/static/cv_styles/images/email_icon.svg");
+}
