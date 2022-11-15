@@ -11,139 +11,68 @@
           <div class="logo"></div>
 
           <div class="header">
-            <h1 class="student-name">Константин <br/> Контантинопский</h1>
-            <h1 class="student-position">DevOps Engineer</h1>
+            <h1 class="student-name">{{ data.first_name}} <br/> {{ data.last_name }}
+            </h1>
+            <h1 class="student-position">{{ data.job_title }}</h1>
           </div>
 
-          <div class="infoblock">
-            <p class="infoblock-title">Опыт работы /</p>
+          {% if data.cv_experience %}
+            <div class="infoblock">
+              <p class="infoblock-title">Опыт работы /</p>
 
-            <ul class="experience">
-              <li class="experience-item">
-                <h3 class="company-name">Acantek Solutions Ltd.</h3>
+              <ul class="experience">
+                {% for job in data.cv_experience.all %}
+                <li class="experience-item">
+                  {% if job.company %}
+                    <h3 class="company-name">{{ job.company }}</h3>
+                  {% endif %}
 
-                <div class="experience-info">
-                  <h4 class="position">DevOps Engineer</h4>
-                  <p class="terms">июнь 2021 - настоящее время</p>
+                  <div class="experience-info">
+                    <h4 class="position">{{ job.job_title }}</h4>
+                    {% if job.start_date %}
+                      <p class="terms">{{ job.start_date }} -
+                        {% if job.end_date %}
+                          {{ job.end_date }}
+                        {% else %}
+                          настоящее время
+                        {% endif %}
+                      </p>
+                    {% endif %}
 
-                  <ul class="projects">
-                    <li class="projects-item">
-                      <p class="project-name">My project # 15</p>
-                      <ul class="project-stack">
-                        <li class="stack-item">CWatch</li>
-                        <li class="stack-item">AWS</li>
-                        <li class="stack-item">Beanstalk</li>
-                      </ul>
-                      <div class="problem">
-                        <p class="problem-title"> Задача:</p>
-                        <p class="problem-description">
-                          AWS (ECS,EC2,Beanstalk,CF,CWatch)
-                          CI\CD (Jenkins) Configuring new vm(lxc)
-                          Доставка и развертывание Flask приложения на инфраструктуру поднятую в AWS, c помощью таких
-                          инструментов как Terraform, Ansible и Jenkins
-                        </p>
-                      </div>
-                      <div class="solution">
-                        <p class="solution-title">Результат:</p>
-                        <p class="solution-description">
-                          https://github.com/features/actions
-                        </p>
-                      </div>
-                    </li>
-                    <li class="projects-item">
-                      <p class="project-name">My project # 14</p>
-                      <ul class="project-stack">
-                        <li class="stack-item">CWatch</li>
-                        <li class="stack-item">AWS</li>
-                        <li class="stack-item">Beanstalk</li>
-                      </ul>
-                      <div class="problem">
-                        <p class="problem-title">Задача:</p>
-                        <p class="problem-description">
-                          AWS (ECS,EC2,Beanstalk,CF,CWatch)
-                          CI\CD (Jenkins) Configuring new vm(lxc)
-                          Доставка и развертывание Flask приложения на инфраструктуру поднятую в AWS, c помощью таких
-                          инструментов как Terraform, Ansible и Jenkins
-                        </p>
-                      </div>
-                      <div class="solution">
-                        <p class="solution-title">Результат:</p>
-                        <p class="solution-description">
-                          https://github.com/features/actions
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="experience-item">
-                <h3 class="company-name">Adroiti Technologies Inc.</h3>
-
-                <div class="experience-info">
-                  <h4 class="position">Junior DevOps Engineer</h4>
-                  <p class="terms">декабрь 2021 - июнь 2021</p>
-
-                  <ul class="projects">
-                    <li class="projects-item">
-                      <p class="project-name">My project # 4</p>
-                      <ul class="project-stack">
-                        <li class="stack-item">MySQL</li>
-                        <li class="stack-item">Linux</li>
-                        <li class="stack-item">Terraform</li>
-                      </ul>
-                      <div class="problem">
-                        <p class="problem-title">Задача:</p>
-                        <p class="problem-description">
-                          Доставка и развертывание Flask приложения на инфраструктуру поднятую в AWS, c помощью таких
-                          инструментов как Terraform, Ansible и Jenkins
-                        </p>
-                      </div>
-                      <div class="solution">
-                        <p class="solution-title">Результат:</p>
-                        <p class="solution-description">
-                          https://github.com/features/actions
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="experience-item">
-                <h3 class="company-name">Школа программирования TeachMeSkills</h3>
-
-                <div class="experience-info">
-                  <h4 class="position">Junior DevOps Engineer</h4>
-                  <p class="terms">декабрь 2021 - июнь 2021</p>
-
-                  <ul class="projects">
-                    <li class="projects-item">
-                      <p class="project-name">My project # 4</p>
-                      <ul class="project-stack">
-                        <li class="stack-item">MySQL</li>
-                        <li class="stack-item">Linux</li>
-                        <li class="stack-item">Terraform</li>
-                      </ul>
-                      <div class="problem">
-                        <p class="problem-title"> Задача:</p>
-                        <p class="problem-description">
-                          Доставка и развертывание Flask приложения на инфраструктуру поднятую в AWS, c помощью таких
-                          инструментов как Terraform, Ansible и Jenkins
-                        </p>
-                      </div>
-                      <div class="solution">
-                        <p class="solution-title">Результат:</p>
-                        <p class="solution-description">
-                          https://github.com/features/actions
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
+                    <ul class="projects">
+                      {% for project in job.projects.all %}
+                      <li class="projects-item">
+                        <p class="project-name">{{ project.project_name }}</p>
+                        <ul class="project-stack">
+                          {% for technology in project.technologies %}
+                            <li class="stack-item">{{ technology.technology }}</li>
+                          {% endfor %}
+                        </ul>
+                        {% if project.description %}
+                          <div class="problem">
+                            <p class="problem-title"> Задача:</p>
+                            <p class="problem-description">
+                              {{ project.description }}
+                            </p>
+                          </div>
+                        {% endif %}
+                        {% if project.summary %}
+                          <div class="solution">
+                            <p class="solution-title">Результат:</p>
+                            <p class="solution-description">
+                              <a href="{{ project.summary }}">{{ project.summary }}</a>
+                            </p>
+                          </div>
+                        {% endif %}
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
 
           <div class="infoblock">
             <p class="infoblock-title">образование /</p>
@@ -172,20 +101,31 @@
         </div>
 
         <div class="container-right">
-          <div class="student-photo-wrapper">
-            <div class="student-photo" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80')"></div>
-          </div>
-<!--          <div class="no-student-photo"></div>-->
+          {% if data.image %}
+            <div class="student-photo-wrapper">
+              <div class="student-photo"
+                   style="background-image: url('{{ data.image }}')"></div>
+            </div>
+          {% else %}
+            <div class="no-student-photo"></div>
+          {% endif %}
 
-          <div class="infoblock">
-            <p class="infoblock-title">контакты /</p>
-            <div class="student-phone">
-              <div class="icon phone-icon"></div><span>+375 44 2485505</span>
+          {% if data.phone or data.email %}
+            <div class="infoblock">
+              <p class="infoblock-title">контакты /</p>
+              {% if data.phone %}
+                <div class="student-phone">
+                  <div class="icon phone-icon"></div><span>{{ data.phone }}</span>
+                </div>
+              {% endif %}
+
+              {% if data.email %}
+                <div class="student-email">
+                  <div class="icon email-icon"></div><span>{{ data.email }}</span>
+                </div>
+              {% endif %}
             </div>
-            <div class="student-email">
-              <div class="icon email-icon"></div><span>sharibchenko.mari@gmail.com</span>
-            </div>
-          </div>
+          {% endif %}
 
           <div class="infoblock">
             <p class="infoblock-title">соцсети /</p>
@@ -193,93 +133,69 @@
               <li class="media-item">
                 <div class="icon" style="background-image: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png')"></div>
                 <span>
-                  <a href="https://css-tricks.com/almanac/properties/o/orphans/">
-                    t.me/constantin_co
-                  </a>
-                </span>
-              </li>
-              <li class="media-item">
-                <div class="icon" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTviikw4x7QkE-OthydtoI6mpcvTr4JeEToYw&usqp=CAU')"></div>
-                <span>
-                  <a href="https://css-tricks.com/almanac/properties/o/orphans/">
-                    linkedin.com/in/constantin
-                  </a>
-                </span>
-              </li>
-              <li class="media-item">
-                <div class="icon" style="background-image: url('https://www.pinpng.com/pngs/m/103-1034820_linkedin-social-logo-comments-linkedin-logo-png-black.png')"></div>
-                <span>
-                  <a href="https://css-tricks.com/almanac/properties/o/orphans/">
-                    github.com/constantin_co
-                  </a>
-                </span>
-              </li>
-              <li class="media-item">
-                <div class="icon" style="background-image: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png')"></div>
-                <span>
-                  <a href="https://css-tricks.com/almanac/properties/o/orphans/">
-                    t.me/constantin_co
-                  </a>
-                </span>
-              </li>
-              <li class="media-item">
-                <div class="icon" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTviikw4x7QkE-OthydtoI6mpcvTr4JeEToYw&usqp=CAU')"></div>
-                <span>
-                  <a href="https://css-tricks.com/almanac/properties/o/orphans/">
-                    linkedin.com/in/constantin
-                  </a>
-                </span>
-              </li>
-              <li class="media-item">
-                <div class="icon" style="background-image: url('https://www.pinpng.com/pngs/m/103-1034820_linkedin-social-logo-comments-linkedin-logo-png-black.png')"></div>
-                <span>
-                  <a href="https://css-tricks.com/almanac/properties/o/orphans/">
-                    github.com/constantin_co
-                  </a>
+<!--                   если добавили ссылку-->
+<!--                  <a href="{{ путь }}">-->
+<!--                    {{ название соц сети }}-->
+<!--                  </a>-->
+<!--                  иначе-->
+                  t.me/constantin_co
                 </span>
               </li>
             </ul>
           </div>
 
-          <div class="infoblock">
-            <p class="infoblock-title">языки /</p>
-            <ul class="languages">
-              <li>Русский (Родной язык)</li>
-              <li>Английский (Intermediate)</li>
-            </ul>
-          </div>
-
-          <div class="infoblock">
-            <p class="infoblock-title">навыки /</p>
-            <div class="skills">
-              MySQL, Linux, Windows, Docker, Terraform, AWS, Jenkins, Ansible, Git, Python
+          {% if data.cv_languages %}
+            <div class="infoblock">
+              <p class="infoblock-title">языки /</p>
+              <ul class="languages">
+                {% for language in data.cv_languages.all %}
+                  <li>{{ language.language.language }} ({{ language.language_level }})</li>
+                {% endfor %}
+              </ul>
             </div>
-          </div>
+          {% endif %}
 
-          <div class="infoblock" id="tools">
-            <p class="infoblock-title">инструменты /</p>
-            <p id="lines"></p>
-            <div class="skills" id="tool-items" style="line-height: 5.6mm;">
-              Puppet, Ansible, Chef, Jenkins, TeamCity, Bamboo, GitHub, BitBucket, GitLab, Spinnaker, Octopus Deploy,
-              Argo CD, TwistLock, Grafana, JIRA, Slack, Microsoft Teams Octopus Deploy, Argo CD, TwistLock, Grafana,
-              JIRA, Slack, Microsoft Teams Puppet, Ansible, Chef, Jenkins, TeamCity, Bamboo, GitHub, BitBucket, GitLab, Spinnaker, Octopus Deploy,
-              Argo CD, TwistLock, Grafana, JIRA, Slack, Microsoft Teams Octopus Deploy, Argo CD, TwistLock, Grafana,
-              JIRA, Slack, Microsoft Teams
+          {% if data.skills %}
+            <div class="infoblock">
+              <p class="infoblock-title">навыки /</p>
+              <div class="skills">
+                {% for skill in data.skills.all %}
+                  {% if forloop.last %}
+                    {{ skill.skill_name }}
+                  {% else %}
+                    {{ skill.skill_name }},
+                  {% endif %}
+                {% endfor %}
+              </div>
             </div>
-          </div>
+          {% endif %}
+
+          {% if data.tools %}
+            <div class="infoblock" id="tools">
+              <p class="infoblock-title">инструменты /</p>
+              <p id="lines"></p>
+              <div class="skills" id="tool-items" style="line-height: 5.6mm;">
+                {% for tool in data.tools.all %}
+                  {% if forloop.last %}
+                    {{ tool.tools_name }}
+                  {% else %}
+                    {{ tool.tools_name }},
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
         </div>
       </div>
 
+      {% if data.additional_info %}
       <div class="student-about">
         <p class="infoblock-title">обо мне /</p>
         <p>
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-          a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-          also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-          with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          {{ data.additional_info }}
         </p>
       </div>
+      {% endif %}
     </div>
   </body>
 </html>

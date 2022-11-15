@@ -190,7 +190,7 @@ ul, ol {
 }
 
 .project-stack {
-    margin-bottom: 2.8mm;
+    margin-bottom: 2.4mm;
 }
 
 .project-stack .stack-item:not(:last-child) {
@@ -204,6 +204,7 @@ ul, ol {
     border-radius: 0.7mm;
     font-size: 2.8mm;
     line-height: 4.2mm;
+    margin-bottom: 1.4mm;
 }
 
 .problem {
@@ -212,6 +213,10 @@ ul, ol {
 
 .problem-title, .solution-title {
     color: #ACB1B6;
+}
+
+.solution-description a {
+    color: #101214;
 }
 
 .languages, .skills {
