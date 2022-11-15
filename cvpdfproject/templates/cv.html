@@ -21,7 +21,7 @@
               <p class="infoblock-title">Опыт работы /</p>
 
               <ul class="experience">
-                {% for job in data.cv_experience.all %}
+                {% for job in data.cv_experience %}
                 <li class="experience-item">
                   {% if job.company %}
                     <h3 class="company-name">{{ job.company }}</h3>
@@ -40,7 +40,7 @@
                     {% endif %}
 
                     <ul class="projects">
-                      {% for project in job.projects.all %}
+                      {% for project in job.projects %}
                       <li class="projects-item">
                         <p class="project-name">{{ project.project_name }}</p>
                         <ul class="project-stack">
@@ -131,7 +131,7 @@
             <p class="infoblock-title">соцсети /</p>
             <ul class="student-social-media">
               <li class="media-item">
-                <div class="icon" style="background-image: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png')"></div>
+                <div class="icon icon-{{ data.social_media.name }}"></div>
                 <span>
 
 {#                 если добавили ссылку         #}
@@ -150,7 +150,7 @@
             <div class="infoblock">
               <p class="infoblock-title">языки /</p>
               <ul class="languages">
-                {% for language in data.cv_languages.all %}
+                {% for language in data.cv_languages %}
                   <li>{{ language.language.language }} ({{ language.language_level }})</li>
                 {% endfor %}
               </ul>
@@ -161,7 +161,7 @@
             <div class="infoblock">
               <p class="infoblock-title">навыки /</p>
               <div class="skills">
-                {% for skill in data.skills.all %}
+                {% for skill in data.skills %}
                   {% if forloop.last %}
                     {{ skill.skill_name }}
                   {% else %}
@@ -177,7 +177,7 @@
               <p class="infoblock-title">инструменты /</p>
               <p id="lines"></p>
               <div class="skills" id="tool-items" style="line-height: 5.6mm;">
-                {% for tool in data.tools.all %}
+                {% for tool in data.tools %}
                   {% if forloop.last %}
                     {{ tool.tools_name }}
                   {% else %}

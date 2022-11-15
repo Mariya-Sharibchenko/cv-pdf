@@ -63,12 +63,12 @@ ul, ol {
 }
 
 .container-left {
-    max-width: 117.5mm;
+    width: 117.5mm;
     margin-right: 10.2mm;
 }
 
 .container-right {
-    max-width: 53mm;
+    width: 53mm;
 }
 
 .student-photo-wrapper {
@@ -239,3 +239,29 @@ ul, ol {
 .email-icon {
     background-image: url("http://127.0.0.1:8000/static/cv_styles/images/email_icon.svg");
 }
+
+.icon-GitHub {
+    background-image: url("http://127.0.0.1:8000/static/cv_styles/images/github_icon.svg");
+}
+.icon-LinkedIn {
+    background-image: url("http://127.0.0.1:8000/static/cv_styles/images/linkedin_icon.svg");
+}
+.icon-Telegram {
+    background-image: url("http://127.0.0.1:8000/static/cv_styles/images/telegram_icon.svg");
+}
+.icon-Viber {
+    background-image: url("http://127.0.0.1:8000/static/cv_styles/images/viber_icon.svg");
+}
+.icon-Dribbble {
+    background-image: url("http://127.0.0.1:8000/static/cv_styles/images/dribbble_icon.svg");
+}
+.icon-Behance {
+    background-image: url("http://127.0.0.1:8000/static/cv_styles/images/behance_icon.svg");
+}
+.icon-Figma {
+    background-image: url("http://127.0.0.1:8000/static/cv_styles/images/figma_icon.svg");
+}
+.icon-Google {
+    background-image: url("http://127.0.0.1:8000/static/cv_styles/images/googleDisk_icon.svg");
+}
+
